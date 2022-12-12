@@ -145,7 +145,7 @@ class _FeedUtilState extends State<FeedUtil> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text('${widget.feedAndUser.favoriteCount} 명이 좋아요를 눌렀습니당'),
+                Text('${widget.feedAndUser.favoriteCount} 명이 좋아요를 눌렀습니다'),
                 const SizedBox(
                   width: 5,
                 ),
