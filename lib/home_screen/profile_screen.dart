@@ -62,24 +62,92 @@ class _ProfileState extends State<Profile> {
                             ),
                           )
                         : Container(),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Text(
-                            widget.feedAndUser.userName,
-                            style: const TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(15.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            widget.feedAndUser.userName,
+                            style: const TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            ', ',
+                            style: const TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            widget.feedAndUser.userName,
+                            style: const TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 13),
                       child: Text(
                         widget.feedAndUser.userAddress,
                         style: const TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.bold),
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 13),
+                      child: Text(
+                        widget.feedAndUser.userBorn.toString(),
+                        style: const TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      color: Color.fromARGB(255, 220, 220, 220),
+                      height: 1,
+                      width: MediaQuery.of(context).size.width / 1.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 13, top: 20),
+                      child: Row(
+                        children: [
+                          const Text('소개'),
+                          const SizedBox(
+                            width: 50,
+                          ),
+                          Text(
+                            widget.feedAndUser.userIntro,
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 13),
+                      child: Row(
+                        children: [
+                          const Text('직업'),
+                          const SizedBox(
+                            width: 50,
+                          ),
+                          Text(
+                            widget.feedAndUser.userJob,
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -87,10 +155,10 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             bottomNavigationBar: Container(
-              height: 170,
+              height: 120,
               child: Column(
                 children: [
-                  _bottomNavigationBar('괜찮아요'),
+                  // _bottomNavigationBar('괜찮아요'),
                   const SizedBox(
                     height: 10,
                   ),

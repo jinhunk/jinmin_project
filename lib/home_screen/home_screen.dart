@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late TabController _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 1, vsync: this);
     super.initState();
     Provider.of<MeetingFeedModel>(context, listen: false)
         .getAllFeedByCityForHome(
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Padding(
-            padding: EdgeInsets.only(right: 300.0),
+            padding: EdgeInsets.only(right: 290.0),
             child: Text(
               '오늘의 추천',
               style: TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold),
@@ -56,11 +56,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ],
       ),
     );
-  }
-
-//라운지
-  Widget loungebody() {
-    return Container();
   }
 
   @override
@@ -95,11 +90,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ],
         backgroundColor: Colors.white,
         elevation: 0.0,
-        leadingWidth: 130,
+        leadingWidth: 60,
         leading: Column(
           children: [
             TabBar(
-              padding: const EdgeInsets.only(left: 5.0),
+              padding: const EdgeInsets.only(left: 0.0),
               labelPadding: const EdgeInsets.symmetric(
                 horizontal: 0.0,
               ),
@@ -114,13 +109,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Tab(
                   child: Text(
                     '추천',
-                    style:
-                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    '라운지',
                     style:
                         TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -143,7 +131,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         controller: _tabController,
         children: [
           SuggestionPages(),
-          loungebody(),
         ],
       ),
     );
