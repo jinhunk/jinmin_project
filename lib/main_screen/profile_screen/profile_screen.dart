@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:jinmin_project/main_screen/comment_screen.dart';
+import 'package:jinmin_project/main_screen/profile_screen/Voico_screen.dart';
+import 'package:jinmin_project/main_screen/profile_screen/animai_screen.dart';
 import 'package:jinmin_project/main_screen/profile_screen/profileedit_screen.dart';
 import 'package:jinmin_project/model/feed_like_model.dart';
 import 'package:jinmin_project/model/friend_ship.dart';
@@ -55,12 +57,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Text('목소리 등록'),
                   ],
                 ),
-                // onTap: () {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => const Voice()),
-                //   );
-                // },
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Voice()),
+                  );
+                },
               ),
               const SizedBox(
                 height: 5.0,
@@ -88,12 +90,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text('반려동물 등록'),
                     ],
                   ),
-                  // onTap: () {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(builder: (context) => const Animal()),
-                  //   );
-                  // },
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Animal()),
+                    );
+                  },
                 ),
               ),
               const SizedBox(

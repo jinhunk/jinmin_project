@@ -8,6 +8,7 @@ class User {
   String userAddress;
   String userJob;
   String userProfileUrl;
+  String userProfileAnimalUrl;
 
   User(
       {required this.userIdx,
@@ -18,7 +19,8 @@ class User {
       required this.userIntro,
       required this.userAddress,
       required this.userJob,
-      required this.userProfileUrl});
+      required this.userProfileUrl,
+      required this.userProfileAnimalUrl});
 
   factory User.fromjson(Map<String, dynamic> json) {
     return User(
@@ -31,6 +33,7 @@ class User {
       userAddress: json['user_address'],
       userJob: json['user_job'],
       userProfileUrl: json['user_profile_url'],
+      userProfileAnimalUrl: json['user_profileanimal_url'],
     );
   }
 }

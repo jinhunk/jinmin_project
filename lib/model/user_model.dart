@@ -162,4 +162,23 @@ class UserModel with ChangeNotifier {
       return false;
     }
   }
+
+  Future<bool> userProfileAnimalImage(
+    int userIdx,
+    String userProfileAnimalUrl,
+  ) async {
+    var request = '$serverUrl/userProfileAnimalImage';
+    Uri uri = Uri.parse(request);
+    var urlWithParam = uri.replace(queryParameters: {
+      'user_idx': userIdx.toString(),
+      'user_profile_url': userProfileAnimalUrl
+    });
+
+    var response = await http.post(urlWithParam);
+    if (response.body == 'ok') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

@@ -120,17 +120,37 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
             ),
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(0.0),
+          child: Container(
+            margin: EdgeInsets.only(bottom: 6.0),
+            width: MediaQuery.of(context).size.width / 1.0,
+            height: MediaQuery.of(context).size.height / 500.0,
+            color: Color.fromARGB(255, 248, 245, 245),
+          ),
+        ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 17.0, top: 15),
+            child: Text(
+              '얼굴 사진',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               image1 == null
                   ? Container(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                      margin: const EdgeInsets.only(left: 5.0, top: 20.0),
-                      width: MediaQuery.of(context).size.width / 3.15,
+                      margin: const EdgeInsets.only(left: 15.0, top: 20.0),
+                      width: MediaQuery.of(context).size.width / 3.35,
                       height: MediaQuery.of(context).size.height / 6.8,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
@@ -168,7 +188,58 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 margin: const EdgeInsets.only(left: 5.0, top: 20.0),
-                width: MediaQuery.of(context).size.width / 3.15,
+                width: MediaQuery.of(context).size.width / 3.35,
+                height: MediaQuery.of(context).size.height / 6.8,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(color: Colors.pink)),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    size: 30.0,
+                    color: Colors.pinkAccent,
+                  ),
+                ),
+              ),
+              //이미지2
+              Container(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                margin: const EdgeInsets.only(left: 5.0, top: 20.0),
+                width: MediaQuery.of(context).size.width / 3.35,
+                height: MediaQuery.of(context).size.height / 6.8,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(color: Colors.pink)),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    size: 30.0,
+                    color: Colors.pinkAccent,
+                  ),
+                ),
+              ),
+              //이미지3
+            ],
+          ),
+          //반려동물 사진이미지
+          const Padding(
+            padding: EdgeInsets.only(left: 17.0, top: 20),
+            child: Text(
+              '반려동물 사진',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            children: [
+              Container(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                margin: const EdgeInsets.only(left: 15.0, top: 20.0),
+                width: MediaQuery.of(context).size.width / 3.35,
                 height: MediaQuery.of(context).size.height / 6.8,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
@@ -185,7 +256,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 margin: const EdgeInsets.only(left: 5.0, top: 20.0),
-                width: MediaQuery.of(context).size.width / 3.15,
+                width: MediaQuery.of(context).size.width / 3.35,
                 height: MediaQuery.of(context).size.height / 6.8,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
@@ -199,6 +270,23 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                   ),
                 ),
               ),
+              Container(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                margin: const EdgeInsets.only(left: 5.0, top: 20.0),
+                width: MediaQuery.of(context).size.width / 3.35,
+                height: MediaQuery.of(context).size.height / 6.8,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(color: Colors.pink)),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    size: 30.0,
+                    color: Colors.pinkAccent,
+                  ),
+                ),
+              )
             ],
           ),
         ],
