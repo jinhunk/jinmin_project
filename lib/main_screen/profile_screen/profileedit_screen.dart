@@ -236,22 +236,27 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
           ),
           Row(
             children: [
-              Container(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                margin: const EdgeInsets.only(left: 15.0, top: 20.0),
-                width: MediaQuery.of(context).size.width / 3.35,
-                height: MediaQuery.of(context).size.height / 6.8,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(color: Colors.pink)),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.add,
-                    size: 30.0,
-                    color: Colors.pinkAccent,
-                  ),
-                ),
+              Consumer<UserModel>(
+                builder: (context, userModel, child) {
+                  if (userModel.me.userProfileAnimalUrl.length > 10) {
+                    print('10이상');
+                  } else {
+                    print('이하');
+                  }
+                  return Container(
+                    margin: const EdgeInsets.only(left: 15.0, top: 20.0),
+                    width: MediaQuery.of(context).size.width / 3.35,
+                    height: MediaQuery.of(context).size.height / 6.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(color: Colors.pink),
+                      image: DecorationImage(
+                          image:
+                              NetworkImage(userModel.me.userProfileAnimalUrl),
+                          fit: BoxFit.cover),
+                    ),
+                  );
+                },
               ),
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -261,14 +266,6 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(color: Colors.pink)),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.add,
-                    size: 30.0,
-                    color: Colors.pinkAccent,
-                  ),
-                ),
               ),
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -278,14 +275,6 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(color: Colors.pink)),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.add,
-                    size: 30.0,
-                    color: Colors.pinkAccent,
-                  ),
-                ),
               )
             ],
           ),
