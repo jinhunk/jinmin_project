@@ -1,19 +1,11 @@
-import 'dart:io';
-
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:jinmin_project/main_screen/comment_screen.dart';
 import 'package:jinmin_project/main_screen/profile_screen/Voico_screen.dart';
+
 import 'package:jinmin_project/main_screen/profile_screen/animai_screen.dart';
 import 'package:jinmin_project/main_screen/profile_screen/profileedit_screen.dart';
-import 'package:jinmin_project/model/feed_like_model.dart';
-import 'package:jinmin_project/model/friend_ship.dart';
-import 'package:jinmin_project/model/meetingfeed.dart';
+
 import 'package:jinmin_project/model/user_model.dart';
 import 'package:jinmin_project/screen/login_screen.dart';
-import 'package:jinmin_project/vo/MeetingFeedAndUser.dart';
-
-import 'package:jinmin_project/vo/meetingFeed.dart';
 
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:provider/provider.dart';
@@ -60,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Voice()),
+                    MaterialPageRoute(builder: (context) => Voice()),
                   );
                 },
               ),

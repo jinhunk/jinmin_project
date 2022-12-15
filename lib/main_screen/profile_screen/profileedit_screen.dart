@@ -121,12 +121,12 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(0.0),
+          preferredSize: const Size.fromHeight(0.0),
           child: Container(
-            margin: EdgeInsets.only(bottom: 6.0),
+            margin: const EdgeInsets.only(bottom: 6.0),
             width: MediaQuery.of(context).size.width / 1.0,
             height: MediaQuery.of(context).size.height / 500.0,
-            color: Color.fromARGB(255, 248, 245, 245),
+            color: const Color.fromARGB(255, 248, 245, 245),
           ),
         ),
       ),

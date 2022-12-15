@@ -29,8 +29,9 @@ class _AnimalState extends State<Animal> {
 
 //파이어베이스에 사진저장
   Future<String> _upLoadFireBase(var image) async {
-    Reference storageReference =
-        firebaseStorage.ref().child("user/-${DateTime.now()..microsecond}");
+    Reference storageReference = firebaseStorage
+        .ref()
+        .child("useranimai/-${DateTime.now()..microsecond}");
     UploadTask storageUploadTask = storageReference.putFile(image);
     await storageUploadTask.whenComplete(() => null);
     String downloadUrl = await storageReference.getDownloadURL();
