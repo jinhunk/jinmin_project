@@ -19,6 +19,7 @@ class MeetingFeedAndUser {
   String userAddress;
   String userJob;
   String userProfileUrl;
+  String userProfileAnimalUrl;
   MeetingFeedAndUser(
       {required this.meetingIdx,
       required this.userIdx,
@@ -39,7 +40,8 @@ class MeetingFeedAndUser {
       required this.userIntro,
       required this.userAddress,
       required this.userJob,
-      required this.userProfileUrl});
+      required this.userProfileUrl,
+      required this.userProfileAnimalUrl});
   factory MeetingFeedAndUser.fromjson(Map<String, dynamic> json) {
     return MeetingFeedAndUser(
       meetingIdx: json['meeting_idx'],
@@ -62,6 +64,7 @@ class MeetingFeedAndUser {
       userAddress: json['user_address'],
       userJob: json['user_job'],
       userProfileUrl: json['user_profile_url'],
+      userProfileAnimalUrl: json['user_profileanimal_url'],
     );
   }
 }

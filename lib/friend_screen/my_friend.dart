@@ -73,33 +73,33 @@ class _MyFriendState extends State<MyFriend> {
             ),
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                '친구 ${shipCount.toString()}명',
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  '친구 ${shipCount.toString()}명',
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            myFriend
-                ? Consumer<FriendShipModel>(
-                    builder: (context, feedCommentModel, child) {
-                      return SingleChildScrollView(
-                        child: Column(
+              myFriend
+                  ? Consumer<FriendShipModel>(
+                      builder: (context, feedCommentModel, child) {
+                        return Column(
                             children: feedCommentModel.friendShipAllUser
                                 .map((meeting) {
                           return MyfriendUtil(friendShipAndUser: meeting);
-                        }).toList()),
-                      );
-                    },
-                  )
-                : Container(),
-          ],
+                        }).toList());
+                      },
+                    )
+                  : Container(),
+            ],
+          ),
         ));
   }
 }

@@ -171,7 +171,7 @@ class UserModel with ChangeNotifier {
     Uri uri = Uri.parse(request);
     var urlWithParam = uri.replace(queryParameters: {
       'user_idx': userIdx.toString(),
-      'user_profile_url': userProfileAnimalUrl
+      'user_profileanimal_url': userProfileAnimalUrl
     });
 
     var response = await http.post(urlWithParam);

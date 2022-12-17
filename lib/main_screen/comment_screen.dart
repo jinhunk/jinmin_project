@@ -38,20 +38,19 @@ class _CommentScreenState extends State<CommentScreen> {
     });
   }
 
-  // void _asyncMethod2() async {
-  //   bool result = await Provider.of<UserModel>(context, listen: false)
-  //       .userProfileImage(
-  //           Provider.of<UserModel>(context, listen: false).me.userIdx,
-  //           Provider.of<UserModel>(context, listen: false).me.userProfileUrl);
-  //   commentImage = result;
-  // }
+  void _asyncMethod2() async {
+    bool result = await Provider.of<UserModel>(context, listen: false)
+        .userProfileImage(
+            widget.feedAndUser.userIdx, widget.feedAndUser.userProfileUrl);
+    commentImage = result;
+  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _asyncMethod();
-    // _asyncMethod2();
+    _asyncMethod2();
   }
 
   @override
@@ -260,14 +259,10 @@ class _CommentScreenState extends State<CommentScreen> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Consumer<UserModel>(
-                                        builder: (context, userModel, child) {
-                                          return CircleAvatar(
-                                            radius: 25,
-                                            backgroundImage: NetworkImage(
-                                                userModel.me.userProfileUrl),
-                                          );
-                                        },
+                                      CircleAvatar(
+                                        radius: 25,
+                                        backgroundImage: NetworkImage(
+                                            meeting.userProfileUrl),
                                       ),
                                       const SizedBox(
                                         width: 10,

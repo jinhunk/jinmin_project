@@ -200,6 +200,10 @@ class _AnimalState extends State<Animal> {
           Padding(
             padding: const EdgeInsets.only(top: 13.0, right: 20.0),
             child: GestureDetector(
+              child: const Text(
+                '저장',
+                style: TextStyle(color: Colors.pink, fontSize: 18.0),
+              ),
               onTap: () async {
                 if (image1Check) {
                   //true
@@ -225,10 +229,6 @@ class _AnimalState extends State<Animal> {
                   Navigator.pop(context);
                 }
               },
-              child: const Text(
-                '저장',
-                style: TextStyle(color: Colors.pink, fontSize: 17.0),
-              ),
             ),
           ),
         ],
