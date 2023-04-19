@@ -6,9 +6,6 @@ import 'package:jinmin_project/main_screen/story_screen.dart';
 import 'package:jinmin_project/main_screen/woman_screen.dart';
 import 'package:jinmin_project/model/meetingfeed.dart';
 import 'package:jinmin_project/model/user_model.dart';
-import 'package:jinmin_project/util/feed_util.dart';
-import 'package:jinmin_project/vo/FriendShipAndUser.dart';
-import 'package:jinmin_project/vo/MeetingFeedAndUser.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {

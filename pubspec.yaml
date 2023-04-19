@@ -42,17 +42,21 @@ dependencies:
   email_validator: ^2.1.17 #이메일 검사
   geolocator: ^9.0.2
   permission_handler: ^10.1.0
-  firebase_core: ^1.24.0
-  firebase_auth: ^3.11.2
-  firebase_storage: ^10.3.10
+  firebase_core: ^2.8.0
+  firebase_auth: ^4.3.0
+  firebase_storage: ^11.0.16
   fluttertoast: ^8.0.9
   loading_overlay: ^0.3.0
   image_picker: ^0.8.6
-  image_cropper: ^1.5.1
+  image_cropper: ^3.0.1
   cached_network_image: ^3.2.2
   infinite_scroll_pagination: ^3.2.0
-  flutter_sound: ^8.1.9
+  flutter_sound: ^9.2.13
   assets_audio_player: ^3.0.3+3
+  loader_overlay: ^2.1.0
+  flutter_spinkit: ^5.1.0
+  table_calendar: ^3.0.8
+  
 
 dev_dependencies:
   flutter_test:

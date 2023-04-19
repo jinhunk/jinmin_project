@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:jinmin_project/main_screen/profile_screen/Voico_screen.dart';
 
 import 'package:jinmin_project/main_screen/profile_screen/animai_screen.dart';
 import 'package:jinmin_project/main_screen/profile_screen/profileedit_screen.dart';
 
 import 'package:jinmin_project/model/user_model.dart';
 import 'package:jinmin_project/screen/login_screen.dart';
+import 'package:jinmin_project/test/test.dart';
 
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:provider/provider.dart';
@@ -52,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Voice()),
+                    MaterialPageRoute(builder: (context) => Test()),
                   );
                 },
               ),

@@ -46,12 +46,12 @@ class _StoryScreenState extends State<StoryScreen> {
           ),
         ),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(0.0),
+          preferredSize: const Size.fromHeight(0.0),
           child: Container(
-            margin: EdgeInsets.only(bottom: 6.0),
+            margin: const EdgeInsets.only(bottom: 6.0),
             width: MediaQuery.of(context).size.width / 1.0,
             height: MediaQuery.of(context).size.height / 500.0,
-            color: Color.fromARGB(255, 248, 245, 245),
+            color: const Color.fromARGB(255, 248, 245, 245),
           ),
         ),
       ),
@@ -100,11 +100,11 @@ class _StoryScreenState extends State<StoryScreen> {
                               height: MediaQuery.of(context).size.height / 19.6,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(13),
-                                color: Color.fromARGB(255, 55, 78, 207),
+                                color: const Color.fromARGB(255, 55, 78, 207),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 12, horizontal: 58.0),
+                                    vertical: 10, horizontal: 58.0),
                                 child: Row(
                                   children: const [
                                     Icon(

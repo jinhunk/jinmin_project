@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }),
                   validator: (email) {
                     if (email!.isEmpty) {
-                      return '이메일을 입력해주세요.';
+                      return '아이디를 입력해주세요.';
                     } else {
                       return EmailValidator.validate(email) == email.isEmpty
                           ? "공백없이 올바른 이메일 형식 또는 아이디를 입력해주세요."
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 }),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "비밀번호를 입력해주세용용.";
+                    return "비밀번호를 입력해주세요.";
                   } else {
                     return value.length > 5
                         ? null
@@ -168,7 +168,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     print('성공');
 
                     //로그인 되고 메인스크린으로
-
                   } else {
                     print('실패');
                     //에러

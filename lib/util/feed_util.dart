@@ -43,6 +43,7 @@ class _FeedUtilState extends State<FeedUtil> {
   @override
   void initState() {
     super.initState();
+
     _ayncMethod();
   }
 
@@ -190,7 +191,7 @@ class _FeedUtilState extends State<FeedUtil> {
                       } else {
                         print('좋아요실패');
                       }
-                    }
+                    } //하트삭제
                   },
                   child: Icon(
                     favoriteCheck ? Icons.favorite : Icons.favorite_border,

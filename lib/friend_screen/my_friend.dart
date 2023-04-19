@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jinmin_project/model/friend_ship.dart';
 import 'package:jinmin_project/model/user_model.dart';
-import 'package:jinmin_project/util/friend_util.dart';
 import 'package:jinmin_project/util/myfriend_util.dart';
-import 'package:jinmin_project/vo/FriendShipAndUser.dart';
 import 'package:provider/provider.dart';
 
 class MyFriend extends StatefulWidget {
